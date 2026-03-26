@@ -7,14 +7,11 @@ import { SpaceBackground } from './components/SpaceBackground'
 import { Preparation } from './components/Preparation'
 import { Stack } from './components/Stack'
 import { FAQ } from './components/FAQ'
-import { AssistantSection } from './components/AssistantSection'
-import { ChatWidget } from './components/ChatWidget'
 import { Footer } from './components/Footer'
 import { FormularioNodriza } from './components/FormularioNodriza'
 
 function App() {
   const [view, setView] = useState<'landing' | 'booking' | 'preparation' | 'formulario'>('landing')
-  const [isChatOpen, setIsChatOpen] = useState(false)
 
   useEffect(() => {
     // Detectar si la URL indica éxito (redirección desde GHL o máscara desde el Hub)
@@ -79,7 +76,6 @@ function App() {
         <Stack />
         <Agenda />
         <FAQ />
-        <AssistantSection onOpenChat={() => setIsChatOpen(true)} />
 
         {/* Footer CTA con Alma Galáctica */}
         <section className="py-40 text-center relative overflow-hidden">
@@ -102,17 +98,6 @@ function App() {
   return (
     <main className="w-full min-h-screen bg-primary-navy relative">
       {renderView()}
-      {view !== 'formulario' && (
-        <ChatWidget
-          isOpen={isChatOpen}
-          setIsOpen={setIsChatOpen}
-          onBooking={() => {
-            setIsChatOpen(false)
-            setView('booking')
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-          }}
-        />
-      )}
     </main>
   )
 }
