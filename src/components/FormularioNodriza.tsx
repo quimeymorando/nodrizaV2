@@ -23,12 +23,25 @@ export function FormularioNodriza() {
                 </div>
 
                 <div className="w-full bg-white/5 backdrop-blur-md p-2 md:p-6 rounded-2xl border border-white/10 shadow-2xl relative">
-                    <iframe
-                        src="https://api.funnelup.io/widget/form/3M7tjESmhd1xCvU8rOK0"
-                        className="w-full min-h-[900px] md:min-h-[850px] border-none rounded-xl"
-                        scrolling="yes"
-                        title="Formulario de confirmación Nodriza"
-                    />
+                    {(() => {
+                        const params = new URLSearchParams(window.location.search);
+                        const email = params.get('email');
+                        const phone = params.get('phone');
+                        const baseUrl = "https://api.funnelup.io/widget/form/3M7tjESmhd1xCvU8rOK0";
+                        const formParams = new URLSearchParams();
+                        if (email) formParams.set('email', email);
+                        if (phone) formParams.set('phone', phone);
+                        const finalSrc = formParams.toString() ? `${baseUrl}?${formParams.toString()}` : baseUrl;
+
+                        return (
+                            <iframe
+                                src={finalSrc}
+                                className="w-full min-h-[900px] md:min-h-[850px] border-none rounded-xl"
+                                scrolling="yes"
+                                title="Formulario de confirmación Nodriza"
+                            />
+                        );
+                    })()}
                 </div>
             </div>
         </div>

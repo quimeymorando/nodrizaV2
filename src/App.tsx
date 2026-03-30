@@ -57,11 +57,24 @@ function App() {
 
           {/* Scroll Fix: Aumentando altura mínima y permitiendo scroll */}
           <div className="bg-white/5 backdrop-blur-md p-2 md:p-6 rounded-sm border border-white/10 min-h-[900px] shadow-2xl">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/booking/qM3gQRT48qaIvdmE1yPj"
-              className="w-full border-none min-h-[850px]"
-              scrolling="yes"
-            />
+            {(() => {
+              const params = new URLSearchParams(window.location.search);
+              const email = params.get('email');
+              const phone = params.get('phone');
+              const baseUrl = "https://api.leadconnectorhq.com/widget/booking/qM3gQRT48qaIvdmE1yPj";
+              const bookingParams = new URLSearchParams();
+              if (email) bookingParams.set('email', email);
+              if (phone) bookingParams.set('phone', phone);
+              const finalSrc = bookingParams.toString() ? `${baseUrl}?${bookingParams.toString()}` : baseUrl;
+              
+              return (
+                <iframe
+                  src={finalSrc}
+                  className="w-full border-none min-h-[850px]"
+                  scrolling="yes"
+                />
+              );
+            })()}
           </div>
         </div>
       </div>
