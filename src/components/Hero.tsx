@@ -38,13 +38,14 @@ export const Hero = ({ onApply }: HeroProps) => {
                     transition={{ delay: 0.4 }}
                     className="w-full max-w-4xl mx-auto aspect-video bg-black/80 rounded-sm border border-white/20 shadow-2xl overflow-hidden mb-10 group transition-all duration-700 hover:border-[#A67C00]/50"
                 >
-                    <iframe
-                        className="w-full h-full"
+                    <video
+                        className="w-full h-full object-contain outline-none bg-black"
                         src="https://storage.googleapis.com/msgsndr/uuaiNCJCRvymWQ2ejuex/media/68ed5e379c7177928bcf347e.mp4"
+                        controls
+                        preload="auto"
+                        playsInline
                         title="Nodriza VSL"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
+                    />
                 </motion.div>
 
                 <motion.h2
