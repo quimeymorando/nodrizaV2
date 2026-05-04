@@ -40,10 +40,10 @@ export const Hero = ({ onApply }: HeroProps) => {
                 >
                     <video
                         className="w-full h-full object-cover outline-none bg-black"
-                        src="/Nodriza-VSL.mp4"
+                        src="https://assets.cdn.filesafe.space/uuaiNCJCRvymWQ2ejuex/media/69f8d722d38dd61887bfae8d.mp4"
                         controls
-                        preload="metadata"
-                        poster="/Cover-Vsl-Nodriza.jpg"
+                        preload="none"
+                        poster="https://assets.cdn.filesafe.space/uuaiNCJCRvymWQ2ejuex/media/697281fd310c2d95dc9e9019.jpg"
                         playsInline
                         title="Nodriza VSL"
                     />
