@@ -5,8 +5,20 @@
             "destination": "/assets/$1"
         },
         {
-            "source": "/nodriza/(.*\\.(mp4|webp|jpeg|jpg|png|svg|ico|gif|woff|woff2|ttf))",
-            "destination": "/$1"
+            "source": "/nodriza/VSL-nodrizaV2.mp4",
+            "destination": "/VSL-nodrizaV2.mp4"
+        },
+        {
+            "source": "/nodriza/portada-VSL-V2.webp",
+            "destination": "/portada-VSL-V2.webp"
+        },
+        {
+            "source": "/nodriza/portada-VSL-V2.jpeg",
+            "destination": "/portada-VSL-V2.jpeg"
+        },
+        {
+            "source": "/nodriza/favicon.ico",
+            "destination": "/favicon.ico"
         },
         {
             "source": "/nodriza/(.*)",
