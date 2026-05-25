@@ -56,10 +56,10 @@ export const Hero = ({ onApply }: HeroProps) => {
                 >
                     <video
                         className="w-full h-full object-cover outline-none bg-black"
-                        src="/nodriza/VSL-nodrizaV2.mp4"
+                        src={`${import.meta.env.BASE_URL}VSL-nodrizaV2.mp4`}
                         controls
                         preload="none"
-                        poster="/nodriza/portada-VSL-V2.webp"
+                        poster={`${import.meta.env.BASE_URL}portada-VSL-V2.webp`}
                         playsInline
                         title="Nodriza VSL"
                     />

@@ -1,27 +1,27 @@
 {
     "rewrites": [
         {
-            "source": "/nodriza/assets/(.*)",
+            "source": "/nodriza-v2/assets/(.*)",
             "destination": "/assets/$1"
         },
         {
-            "source": "/nodriza/VSL-nodrizaV2.mp4",
+            "source": "/nodriza-v2/VSL-nodrizaV2.mp4",
             "destination": "/VSL-nodrizaV2.mp4"
         },
         {
-            "source": "/nodriza/portada-VSL-V2.webp",
+            "source": "/nodriza-v2/portada-VSL-V2.webp",
             "destination": "/portada-VSL-V2.webp"
         },
         {
-            "source": "/nodriza/portada-VSL-V2.jpeg",
+            "source": "/nodriza-v2/portada-VSL-V2.jpeg",
             "destination": "/portada-VSL-V2.jpeg"
         },
         {
-            "source": "/nodriza/favicon.ico",
+            "source": "/nodriza-v2/favicon.ico",
             "destination": "/favicon.ico"
         },
         {
-            "source": "/nodriza/(.*)",
+            "source": "/nodriza-v2/(.*)",
             "destination": "/index.html"
         },
         {
