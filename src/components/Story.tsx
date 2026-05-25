@@ -70,6 +70,20 @@ export const Story = () => {
                         <div className="absolute -top-6 -left-6 w-full h-full border border-[#A67C00]/30 z-10 rounded-sm" />
                     </div>
 
+                    {/* Foto de Joaco — solo mobile */}
+                    <div className="block lg:hidden rounded-sm overflow-hidden border border-white/20 shadow-2xl relative aspect-[3/4] max-w-xs mx-auto w-full">
+                        <img
+                            src="https://storage.googleapis.com/msgsndr/uuaiNCJCRvymWQ2ejuex/media/698b6cc38682155edc61e55e.png"
+                            alt="Joaquín Alterman"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                        <div className="absolute bottom-6 left-6 right-6 text-white">
+                            <p className="font-cinzel text-xl mb-1">Joaquín Alterman</p>
+                            <p className="font-montserrat text-xs opacity-70 tracking-widest uppercase">Fundador de Nodriza</p>
+                        </div>
+                    </div>
+
                     {/* Columna Derecha: Timeline */}
                     <div className="flex flex-col justify-center">
                         <div className="mb-16">

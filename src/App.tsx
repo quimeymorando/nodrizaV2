@@ -6,6 +6,7 @@ import { Agenda } from './components/Agenda'
 import { SpaceBackground } from './components/SpaceBackground'
 import { Preparation } from './components/Preparation'
 import { Stack } from './components/Stack'
+import { TestimonialsVideo } from './components/TestimonialsVideo'
 import { FAQ } from './components/FAQ'
 import { Footer } from './components/Footer'
 import { FormularioNodriza } from './components/FormularioNodriza'
@@ -87,7 +88,12 @@ function App() {
         <Pillars />
         <Story />
         <Stack />
-        <Agenda />
+        {/* Fondo estelar compartido entre Agenda y Testimonios */}
+        <div className="relative bg-primary-navy overflow-hidden">
+          <SpaceBackground />
+          <Agenda />
+          <TestimonialsVideo />
+        </div>
         <FAQ />
 
         {/* Footer CTA con Alma Galáctica */}

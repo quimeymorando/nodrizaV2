@@ -46,9 +46,7 @@ const agenda = [
 
 export const Agenda = () => {
     return (
-        <section className="py-32 relative overflow-hidden bg-primary-navy">
-            {/* Fondo Galáctico */}
-            <SpaceBackground />
+        <section className="py-32 relative">
 
             <div className="container mx-auto px-4 max-w-7xl relative z-10">
                 <div className="text-center mb-24">
