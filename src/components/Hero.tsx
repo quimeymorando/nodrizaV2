@@ -31,6 +31,22 @@ export const Hero = ({ onApply }: HeroProps) => {
                     Construye tu <span className="text-gold-gradient drop-shadow-sm px-2">SOSTÉN</span>
                 </motion.h1>
 
+                {/* Urgencia pre-VSL */}
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.35 }}
+                    className="flex items-center justify-center gap-3 mb-6"
+                >
+                    <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+                    </span>
+                    <span className="font-cinzel text-white/90 text-sm md:text-base tracking-widest uppercase">
+                        Mira el siguiente video
+                    </span>
+                </motion.div>
+
                 {/* VSL Container (WebApp Style) */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -40,10 +56,10 @@ export const Hero = ({ onApply }: HeroProps) => {
                 >
                     <video
                         className="w-full h-full object-cover outline-none bg-black"
-                        src="https://assets.cdn.filesafe.space/uuaiNCJCRvymWQ2ejuex/media/69f8d722d38dd61887bfae8d.mp4"
+                        src="/nodriza/VSL-nodrizaV2.mp4"
                         controls
                         preload="none"
-                        poster="https://assets.cdn.filesafe.space/uuaiNCJCRvymWQ2ejuex/media/697281fd310c2d95dc9e9019.jpg"
+                        poster="/nodriza/portada-VSL-V2.webp"
                         playsInline
                         title="Nodriza VSL"
                     />
