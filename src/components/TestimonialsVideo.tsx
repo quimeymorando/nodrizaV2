@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Clock } from 'lucide-react'
-import { SpaceBackground } from './SpaceBackground'
 
 type CardData = {
   id: number
