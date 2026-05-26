@@ -10,6 +10,7 @@ import { TestimonialsVideo } from './components/TestimonialsVideo'
 import { FAQ } from './components/FAQ'
 import { Footer } from './components/Footer'
 import { FormularioNodriza } from './components/FormularioNodriza'
+import AgendarForm from './components/AgendarForm'
 
 function App() {
   const [view, setView] = useState<'landing' | 'booking' | 'preparation' | 'formulario'>('landing')
@@ -84,7 +85,12 @@ function App() {
     // Default: Landing
     return (
       <div className="animate-in fade-in duration-700 relative z-10">
-        <Hero onApply={toggleView} />
+        {/* Fondo estelar compartido entre Hero y formulario */}
+        <div className="relative overflow-hidden">
+          <SpaceBackground />
+          <Hero onApply={toggleView} />
+          <AgendarForm />
+        </div>
         <Pillars />
         <Story />
         <Stack />

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { SpaceBackground } from './SpaceBackground'
 
 interface HeroProps {
     onApply: () => void;
@@ -7,9 +6,7 @@ interface HeroProps {
 
 export const Hero = ({ onApply }: HeroProps) => {
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20 pb-16">
-            {/* Fondo Galáctico Unificado */}
-            <SpaceBackground />
+        <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-6">
 
             <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
                 <motion.span
@@ -84,12 +81,6 @@ export const Hero = ({ onApply }: HeroProps) => {
                     Es sólo para los que están listos para tomar ACCIÓN y crear una vida gloriosa!
                 </motion.p>
 
-                <button
-                    onClick={onApply}
-                    className="button-gold-metallic px-8 py-4 md:px-10 md:py-5 text-white font-bold rounded-full shadow-gold hover:scale-105 transition-all duration-300 font-cinzel text-lg md:text-xl tracking-widest"
-                >
-                    AGENDAR ES ELEGIRTE
-                </button>
             </div>
         </section>
     )
